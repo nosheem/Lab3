@@ -1,0 +1,698 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "b254c01c-d9c6-4898-a92c-f94c7c069855",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Requirement already satisfied: numpy in c:\\users\\hp\\appdata\\roaming\\python\\python312\\site-packages (2.1.2)Note: you may need to restart the kernel to use updated packages.\n",
+      "\n"
+     ]
+    }
+   ],
+   "source": [
+    "pip install numpy"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "1cb73622-be1b-46cc-a3aa-8c5a053638d1",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import numpy as np"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "dbaa9fae-58d4-4142-b4bc-3b62bf59a52d",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "mylist=[1,3,5,6]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "c4530c48-e873-41a7-a637-9d388589edca",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[1, 3, 5, 6]"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mylist"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "d827b6b2-223d-49b5-8f3a-584b237f8196",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "list"
+      ]
+     },
+     "execution_count": 9,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "type(mylist)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "54f5a677-0bb5-41ab-9e51-211b1c132909",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([1, 3, 5, 6])"
+      ]
+     },
+     "execution_count": 11,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "np.array(mylist)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "66f02180-5e4c-4c2c-be46-4205219ba4ab",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "mylist=[[1,3,5],[4,5,6],[1,4,76],[1,3,5]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "5d81e36e-67da-4b69-8ae9-27a031413970",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[[1, 3, 5], [4, 5, 6], [1, 4, 76], [1, 3, 5]]"
+      ]
+     },
+     "execution_count": 15,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mylist"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "412a0843-db7b-4f77-a874-e20310f27ae5",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[ 1,  3,  5],\n",
+       "       [ 4,  5,  6],\n",
+       "       [ 1,  4, 76],\n",
+       "       [ 1,  3,  5]])"
+      ]
+     },
+     "execution_count": 17,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "np.array(mylist)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "472ca44f-ae55-455e-a569-8725d172a396",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "mymatrix=np.array(mylist)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "id": "bfd4a091-9269-45c7-ab00-543a03ef722f",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(4, 3)"
+      ]
+     },
+     "execution_count": 21,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mymatrix.shape"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "1933af65-26ec-412a-8aca-8b56cc458a5c",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14])"
+      ]
+     },
+     "execution_count": 23,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "np.arange(0,15)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "41c70919-fd11-4793-b4c9-730b2a1dd3de",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.])"
+      ]
+     },
+     "execution_count": 25,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "np.zeros(12)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 35,
+   "id": "e4507917-ac68-4ff5-8008-3129bd78063a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([0., 0., 0., 0., 0.])"
+      ]
+     },
+     "execution_count": 35,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "np.zeros(5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 37,
+   "id": "73be085c-3de0-4bbf-ae25-78eef6335d41",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0.],\n",
+       "       [0., 0., 0., 0., 0., 0., 0., 0., 0., 0.],\n",
+       "       [0., 0., 0., 0., 0., 0., 0., 0., 0., 0.],\n",
+       "       [0., 0., 0., 0., 0., 0., 0., 0., 0., 0.]])"
+      ]
+     },
+     "execution_count": 37,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "np.zeros((4,10))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 39,
+   "id": "45088bd8-577c-4c7d-9bc9-e9bd2fb661da",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],\n",
+       "       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],\n",
+       "       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],\n",
+       "       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.]])"
+      ]
+     },
+     "execution_count": 39,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "np.ones((4,10))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "8cf65245-4337-4914-b8ad-b3477074888a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "A module that was compiled using NumPy 1.x cannot be run in\n",
+      "NumPy 2.1.2 as it may crash. To support both 1.x and 2.x\n",
+      "versions of NumPy, modules must be compiled with NumPy 2.0.\n",
+      "Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.\n",
+      "\n",
+      "If you are a user of the module, the easiest solution will be to\n",
+      "downgrade to 'numpy<2' or try to upgrade the affected module.\n",
+      "We expect that some modules will need time to support NumPy 2.\n",
+      "\n",
+      "Traceback (most recent call last):  File \"<frozen runpy>\", line 198, in _run_module_as_main\n",
+      "  File \"<frozen runpy>\", line 88, in _run_code\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\ipykernel_launcher.py\", line 18, in <module>\n",
+      "    app.launch_new_instance()\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\traitlets\\config\\application.py\", line 1075, in launch_instance\n",
+      "    app.start()\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\ipykernel\\kernelapp.py\", line 739, in start\n",
+      "    self.io_loop.start()\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\tornado\\platform\\asyncio.py\", line 205, in start\n",
+      "    self.asyncio_loop.run_forever()\n",
+      "  File \"C:\\Users\\HP\\anaconda3\\Lib\\asyncio\\base_events.py\", line 641, in run_forever\n",
+      "    self._run_once()\n",
+      "  File \"C:\\Users\\HP\\anaconda3\\Lib\\asyncio\\base_events.py\", line 1987, in _run_once\n",
+      "    handle._run()\n",
+      "  File \"C:\\Users\\HP\\anaconda3\\Lib\\asyncio\\events.py\", line 88, in _run\n",
+      "    self._context.run(self._callback, *self._args)\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\ipykernel\\kernelbase.py\", line 545, in dispatch_queue\n",
+      "    await self.process_one()\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\ipykernel\\kernelbase.py\", line 534, in process_one\n",
+      "    await dispatch(*args)\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\ipykernel\\kernelbase.py\", line 437, in dispatch_shell\n",
+      "    await result\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\ipykernel\\ipkernel.py\", line 362, in execute_request\n",
+      "    await super().execute_request(stream, ident, parent)\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\ipykernel\\kernelbase.py\", line 778, in execute_request\n",
+      "    reply_content = await reply_content\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\ipykernel\\ipkernel.py\", line 449, in do_execute\n",
+      "    res = shell.run_cell(\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\ipykernel\\zmqshell.py\", line 549, in run_cell\n",
+      "    return super().run_cell(*args, **kwargs)\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\IPython\\core\\interactiveshell.py\", line 3075, in run_cell\n",
+      "    result = self._run_cell(\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\IPython\\core\\interactiveshell.py\", line 3130, in _run_cell\n",
+      "    result = runner(coro)\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\IPython\\core\\async_helpers.py\", line 128, in _pseudo_sync_runner\n",
+      "    coro.send(None)\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\IPython\\core\\interactiveshell.py\", line 3334, in run_cell_async\n",
+      "    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\IPython\\core\\interactiveshell.py\", line 3517, in run_ast_nodes\n",
+      "    if await self.run_code(code, result, async_=asy):\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\IPython\\core\\interactiveshell.py\", line 3577, in run_code\n",
+      "    exec(code_obj, self.user_global_ns, self.user_ns)\n",
+      "  File \"C:\\Users\\HP\\AppData\\Local\\Temp\\ipykernel_11196\\4080736814.py\", line 1, in <module>\n",
+      "    import pandas as pd\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\pandas\\__init__.py\", line 62, in <module>\n",
+      "    from pandas.core.api import (\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\pandas\\core\\api.py\", line 28, in <module>\n",
+      "    from pandas.core.arrays import Categorical\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\pandas\\core\\arrays\\__init__.py\", line 1, in <module>\n",
+      "    from pandas.core.arrays.arrow import ArrowExtensionArray\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\pandas\\core\\arrays\\arrow\\__init__.py\", line 5, in <module>\n",
+      "    from pandas.core.arrays.arrow.array import ArrowExtensionArray\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\pandas\\core\\arrays\\arrow\\array.py\", line 50, in <module>\n",
+      "    from pandas.core import (\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\pandas\\core\\ops\\__init__.py\", line 8, in <module>\n",
+      "    from pandas.core.ops.array_ops import (\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\pandas\\core\\ops\\array_ops.py\", line 56, in <module>\n",
+      "    from pandas.core.computation import expressions\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\pandas\\core\\computation\\expressions.py\", line 21, in <module>\n",
+      "    from pandas.core.computation.check import NUMEXPR_INSTALLED\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\pandas\\core\\computation\\check.py\", line 5, in <module>\n",
+      "    ne = import_optional_dependency(\"numexpr\", errors=\"warn\")\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\pandas\\compat\\_optional.py\", line 135, in import_optional_dependency\n",
+      "    module = importlib.import_module(name)\n",
+      "  File \"C:\\Users\\HP\\anaconda3\\Lib\\importlib\\__init__.py\", line 90, in import_module\n",
+      "    return _bootstrap._gcd_import(name[level:], package, level)\n",
+      "  File \"C:\\Users\\HP\\anaconda3\\Lib\\site-packages\\numexpr\\__init__.py\", line 24, in <module>\n",
+      "    from numexpr.interpreter import MAX_THREADS, use_vml, __BLOCK_SIZE1__\n"
+     ]
+    },
+    {
+     "ename": "AttributeError",
+     "evalue": "_ARRAY_API not found",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mAttributeError\u001b[0m                            Traceback (most recent call last)",
+      "\u001b[1;31mAttributeError\u001b[0m: _ARRAY_API not found"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "A module that was compiled using NumPy 1.x cannot be run in\n",
+      "NumPy 2.1.2 as it may crash. To support both 1.x and 2.x\n",
+      "versions of NumPy, modules must be compiled with NumPy 2.0.\n",
+      "Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.\n",
+      "\n",
+      "If you are a user of the module, the easiest solution will be to\n",
+      "downgrade to 'numpy<2' or try to upgrade the affected module.\n",
+      "We expect that some modules will need time to support NumPy 2.\n",
+      "\n",
+      "Traceback (most recent call last):  File \"<frozen runpy>\", line 198, in _run_module_as_main\n",
+      "  File \"<frozen runpy>\", line 88, in _run_code\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\ipykernel_launcher.py\", line 18, in <module>\n",
+      "    app.launch_new_instance()\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\traitlets\\config\\application.py\", line 1075, in launch_instance\n",
+      "    app.start()\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\ipykernel\\kernelapp.py\", line 739, in start\n",
+      "    self.io_loop.start()\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\tornado\\platform\\asyncio.py\", line 205, in start\n",
+      "    self.asyncio_loop.run_forever()\n",
+      "  File \"C:\\Users\\HP\\anaconda3\\Lib\\asyncio\\base_events.py\", line 641, in run_forever\n",
+      "    self._run_once()\n",
+      "  File \"C:\\Users\\HP\\anaconda3\\Lib\\asyncio\\base_events.py\", line 1987, in _run_once\n",
+      "    handle._run()\n",
+      "  File \"C:\\Users\\HP\\anaconda3\\Lib\\asyncio\\events.py\", line 88, in _run\n",
+      "    self._context.run(self._callback, *self._args)\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\ipykernel\\kernelbase.py\", line 545, in dispatch_queue\n",
+      "    await self.process_one()\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\ipykernel\\kernelbase.py\", line 534, in process_one\n",
+      "    await dispatch(*args)\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\ipykernel\\kernelbase.py\", line 437, in dispatch_shell\n",
+      "    await result\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\ipykernel\\ipkernel.py\", line 362, in execute_request\n",
+      "    await super().execute_request(stream, ident, parent)\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\ipykernel\\kernelbase.py\", line 778, in execute_request\n",
+      "    reply_content = await reply_content\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\ipykernel\\ipkernel.py\", line 449, in do_execute\n",
+      "    res = shell.run_cell(\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\ipykernel\\zmqshell.py\", line 549, in run_cell\n",
+      "    return super().run_cell(*args, **kwargs)\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\IPython\\core\\interactiveshell.py\", line 3075, in run_cell\n",
+      "    result = self._run_cell(\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\IPython\\core\\interactiveshell.py\", line 3130, in _run_cell\n",
+      "    result = runner(coro)\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\IPython\\core\\async_helpers.py\", line 128, in _pseudo_sync_runner\n",
+      "    coro.send(None)\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\IPython\\core\\interactiveshell.py\", line 3334, in run_cell_async\n",
+      "    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\IPython\\core\\interactiveshell.py\", line 3517, in run_ast_nodes\n",
+      "    if await self.run_code(code, result, async_=asy):\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\IPython\\core\\interactiveshell.py\", line 3577, in run_code\n",
+      "    exec(code_obj, self.user_global_ns, self.user_ns)\n",
+      "  File \"C:\\Users\\HP\\AppData\\Local\\Temp\\ipykernel_11196\\4080736814.py\", line 1, in <module>\n",
+      "    import pandas as pd\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\pandas\\__init__.py\", line 62, in <module>\n",
+      "    from pandas.core.api import (\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\pandas\\core\\api.py\", line 28, in <module>\n",
+      "    from pandas.core.arrays import Categorical\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\pandas\\core\\arrays\\__init__.py\", line 1, in <module>\n",
+      "    from pandas.core.arrays.arrow import ArrowExtensionArray\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\pandas\\core\\arrays\\arrow\\__init__.py\", line 5, in <module>\n",
+      "    from pandas.core.arrays.arrow.array import ArrowExtensionArray\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\pandas\\core\\arrays\\arrow\\array.py\", line 64, in <module>\n",
+      "    from pandas.core.arrays.masked import BaseMaskedArray\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\pandas\\core\\arrays\\masked.py\", line 60, in <module>\n",
+      "    from pandas.core import (\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\pandas\\core\\nanops.py\", line 52, in <module>\n",
+      "    bn = import_optional_dependency(\"bottleneck\", errors=\"warn\")\n",
+      "  File \"C:\\Users\\HP\\AppData\\Roaming\\Python\\Python312\\site-packages\\pandas\\compat\\_optional.py\", line 135, in import_optional_dependency\n",
+      "    module = importlib.import_module(name)\n",
+      "  File \"C:\\Users\\HP\\anaconda3\\Lib\\importlib\\__init__.py\", line 90, in import_module\n",
+      "    return _bootstrap._gcd_import(name[level:], package, level)\n",
+      "  File \"C:\\Users\\HP\\anaconda3\\Lib\\site-packages\\bottleneck\\__init__.py\", line 7, in <module>\n",
+      "    from .move import (move_argmax, move_argmin, move_max, move_mean, move_median,\n"
+     ]
+    },
+    {
+     "ename": "ImportError",
+     "evalue": "\nA module that was compiled using NumPy 1.x cannot be run in\nNumPy 2.1.2 as it may crash. To support both 1.x and 2.x\nversions of NumPy, modules must be compiled with NumPy 2.0.\nSome module may need to rebuild instead e.g. with 'pybind11>=2.12'.\n\nIf you are a user of the module, the easiest solution will be to\ndowngrade to 'numpy<2' or try to upgrade the affected module.\nWe expect that some modules will need time to support NumPy 2.\n\n",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mImportError\u001b[0m                               Traceback (most recent call last)",
+      "File \u001b[1;32m~\\AppData\\Roaming\\Python\\Python312\\site-packages\\numpy\\core\\_multiarray_umath.py:44\u001b[0m, in \u001b[0;36m__getattr__\u001b[1;34m(attr_name)\u001b[0m\n\u001b[0;32m     39\u001b[0m     \u001b[38;5;66;03m# Also print the message (with traceback).  This is because old versions\u001b[39;00m\n\u001b[0;32m     40\u001b[0m     \u001b[38;5;66;03m# of NumPy unfortunately set up the import to replace (and hide) the\u001b[39;00m\n\u001b[0;32m     41\u001b[0m     \u001b[38;5;66;03m# error.  The traceback shouldn't be needed, but e.g. pytest plugins\u001b[39;00m\n\u001b[0;32m     42\u001b[0m     \u001b[38;5;66;03m# seem to swallow it and we should be failing anyway...\u001b[39;00m\n\u001b[0;32m     43\u001b[0m     sys\u001b[38;5;241m.\u001b[39mstderr\u001b[38;5;241m.\u001b[39mwrite(msg \u001b[38;5;241m+\u001b[39m tb_msg)\n\u001b[1;32m---> 44\u001b[0m     \u001b[38;5;28;01mraise\u001b[39;00m \u001b[38;5;167;01mImportError\u001b[39;00m(msg)\n\u001b[0;32m     46\u001b[0m ret \u001b[38;5;241m=\u001b[39m \u001b[38;5;28mgetattr\u001b[39m(_multiarray_umath, attr_name, \u001b[38;5;28;01mNone\u001b[39;00m)\n\u001b[0;32m     47\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m ret \u001b[38;5;129;01mis\u001b[39;00m \u001b[38;5;28;01mNone\u001b[39;00m:\n",
+      "\u001b[1;31mImportError\u001b[0m: \nA module that was compiled using NumPy 1.x cannot be run in\nNumPy 2.1.2 as it may crash. To support both 1.x and 2.x\nversions of NumPy, modules must be compiled with NumPy 2.0.\nSome module may need to rebuild instead e.g. with 'pybind11>=2.12'.\n\nIf you are a user of the module, the easiest solution will be to\ndowngrade to 'numpy<2' or try to upgrade the affected module.\nWe expect that some modules will need time to support NumPy 2.\n\n"
+     ]
+    }
+   ],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "654b4122-7ba9-455e-9dae-e4ed5664c34c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Requirement already satisfied: pandas in c:\\users\\hp\\appdata\\roaming\\python\\python312\\site-packages (2.2.3)Note: you may need to restart the kernel to use updated packages.\n",
+      "\n",
+      "Requirement already satisfied: numpy>=1.26.0 in c:\\users\\hp\\appdata\\roaming\\python\\python312\\site-packages (from pandas) (2.1.2)\n",
+      "Requirement already satisfied: python-dateutil>=2.8.2 in c:\\users\\hp\\appdata\\roaming\\python\\python312\\site-packages (from pandas) (2.9.0.post0)\n",
+      "Requirement already satisfied: pytz>=2020.1 in c:\\users\\hp\\appdata\\roaming\\python\\python312\\site-packages (from pandas) (2024.2)\n",
+      "Requirement already satisfied: tzdata>=2022.7 in c:\\users\\hp\\appdata\\roaming\\python\\python312\\site-packages (from pandas) (2024.2)\n",
+      "Requirement already satisfied: six>=1.5 in c:\\users\\hp\\appdata\\roaming\\python\\python312\\site-packages (from python-dateutil>=2.8.2->pandas) (1.16.0)\n"
+     ]
+    }
+   ],
+   "source": [
+    "pip install pandas"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "1dcb3c6b-2f42-4af3-87a3-cce760b67aac",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import matplotlib.pyplot as plt\n",
+    "import seaborn as sns\n",
+    "%matplotlib inline"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "92e47596-07de-4058-829b-fe84d2956e75",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>aep</th>\n",
+       "      <th>Is_holiday1</th>\n",
+       "      <th>Is_holiday2</th>\n",
+       "      <th>Is_Weekend1</th>\n",
+       "      <th>Is_Weekend2</th>\n",
+       "      <th>sin_month</th>\n",
+       "      <th>cos_month</th>\n",
+       "      <th>sin_week</th>\n",
+       "      <th>cos_week</th>\n",
+       "      <th>sin_hour</th>\n",
+       "      <th>...</th>\n",
+       "      <th>sin_wintert</th>\n",
+       "      <th>cos_wintert</th>\n",
+       "      <th>sin_springt</th>\n",
+       "      <th>cos_springt</th>\n",
+       "      <th>sin_summert</th>\n",
+       "      <th>cos_summert</th>\n",
+       "      <th>sin_fallt</th>\n",
+       "      <th>cos_fallt</th>\n",
+       "      <th>sin_year_dayt</th>\n",
+       "      <th>cos_year_dayt</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>0.282291</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>1.224647e-16</td>\n",
+       "      <td>-1.0</td>\n",
+       "      <td>-2.449294e-16</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>-0.866025</td>\n",
+       "      <td>...</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>6.123234e-17</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>0.39359</td>\n",
+       "      <td>-0.919286</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>0.271621</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>1.224647e-16</td>\n",
+       "      <td>-1.0</td>\n",
+       "      <td>-2.449294e-16</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>-0.707107</td>\n",
+       "      <td>...</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>6.123234e-17</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>0.39359</td>\n",
+       "      <td>-0.919286</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "<p>2 rows × 21 columns</p>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "        aep  Is_holiday1  Is_holiday2  Is_Weekend1  Is_Weekend2     sin_month  \\\n",
+       "0  0.282291          1.0          0.0          0.0          1.0  1.224647e-16   \n",
+       "1  0.271621          1.0          0.0          0.0          1.0  1.224647e-16   \n",
+       "\n",
+       "   cos_month      sin_week  cos_week  sin_hour  ...  sin_wintert  cos_wintert  \\\n",
+       "0       -1.0 -2.449294e-16       1.0 -0.866025  ...          0.0          1.0   \n",
+       "1       -1.0 -2.449294e-16       1.0 -0.707107  ...          0.0          1.0   \n",
+       "\n",
+       "   sin_springt  cos_springt  sin_summert   cos_summert  sin_fallt  cos_fallt  \\\n",
+       "0          0.0          1.0          1.0  6.123234e-17        0.0        1.0   \n",
+       "1          0.0          1.0          1.0  6.123234e-17        0.0        1.0   \n",
+       "\n",
+       "   sin_year_dayt  cos_year_dayt  \n",
+       "0        0.39359      -0.919286  \n",
+       "1        0.39359      -0.919286  \n",
+       "\n",
+       "[2 rows x 21 columns]"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "df=pd.read_csv(r'C:\\Users\\HP\\Downloads\\\\AEP_validation.csv')\n",
+    "df.head(2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "6d9fa7b5-2545-47d8-a0ae-02dc1f18355a",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.4"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
